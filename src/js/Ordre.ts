@@ -13,10 +13,10 @@ export class Ordre {
      * TotalSum
      */
     public TotalSum() {
-        const priceArray: number[] = new Array<number>();
+        let priceTotal: number = 0;
         this.OrdreListe.forEach((ordre) => {
-            priceArray.push(ordre.SumMedMoms());
+            priceTotal += ordre.SumMedMoms();
         });
-        return priceArray;
+        return priceTotal;
     }
 }
