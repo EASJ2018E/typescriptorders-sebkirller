@@ -13,7 +13,17 @@ export class OrdreLinie implements IOrdreLinie {
         this.UnitPriceDiscount = unitPriceDiscount;
     }
 
+    /**
+     * BeregnSum
+     */
     public BeregnSum() {
         return this.OrderQty * (this.UnitPrice - this.UnitPriceDiscount);
+    }
+
+    /**
+     * Moms
+     */
+    public Moms() {
+        return this.BeregnSum() * 0.25;
     }
 }
